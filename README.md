@@ -1,3 +1,5 @@
+# added javascript practice files 
+
 # this project was created from my local laptop
 ones i made mini_projects or activity in  proper manner , then i push it to github
 
