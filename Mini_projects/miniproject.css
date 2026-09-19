@@ -1,0 +1,117 @@
+/* Include padding and borders inside each element's total width. */
+* {
+	box-sizing: border-box;
+}
+
+/* Center the TODO app and create the page background. */
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 32px 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
+	color: #243047;
+	background: linear-gradient(135deg, #dff3ff, #f8f4ff);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+/* Style and center the main heading. */
+h1 {
+	margin: 0;
+	color: #17233c;
+	font-size: clamp(2rem, 6vw, 3rem);
+	text-align: center;
+}
+
+/* Set the size and appearance of the task input. */
+input {
+	width: min(100%, 360px);
+	padding: 13px 16px;
+	border: 2px solid #c8d2e6;
+	border-radius: 8px;
+	outline: none;
+	color: #243047;
+	background: #ffffff;
+	font: inherit;
+}
+
+/* Highlight the input when the user selects it. */
+input:focus {
+	border-color: #3978c8;
+	box-shadow: 0 0 0 3px #3978c833;
+}
+
+/* Style the Add Task button. */
+body > button {
+	padding: 13px 22px;
+	border: 0;
+	border-radius: 8px;
+	color: #ffffff;
+	background: #3978c8;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background 160ms ease, transform 160ms ease;
+}
+
+/* Change the Add Task button when the mouse is over it. */
+body > button:hover {
+	background: #285da4;
+	transform: translateY(-2px);
+}
+
+/* Remove default list styling and limit the list width. */
+ul {
+	width: min(100%, 480px);
+	margin: 4px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Arrange each task and its Delete button in one row. */
+li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 10px;
+	padding: 14px 16px;
+	border: 1px solid #d9e1ef;
+	border-radius: 8px;
+	background: #ffffffcc;
+	box-shadow: 0 6px 18px #40557918;
+	overflow-wrap: anywhere;
+}
+
+/* Style each Delete button. */
+.delete {
+	flex: 0 0 auto;
+	padding: 7px 11px;
+	border: 0;
+	border-radius: 6px;
+	color: #ffffff;
+	background: #df5b61;
+	font: inherit;
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+
+/* Darken the Delete button when the mouse is over it. */
+.delete:hover {
+	background: #bd3e48;
+}
+
+/* Reduce spacing on narrow screens such as mobile phones. */
+@media (max-width: 420px) {
+	body {
+		padding: 24px 12px;
+	}
+
+	li {
+		gap: 10px;
+		padding: 12px;
+	}
+}
